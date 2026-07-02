@@ -1,0 +1,184 @@
+/* ===========================
+   PAGE HEADER
+=========================== */
+
+.page-header {
+    margin-bottom: 24px;
+}
+
+.page-header h2 {
+    font-size: 28px;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+
+/* ===========================
+   CARD
+=========================== */
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+
+/* ===========================
+   FOTO PROFIL
+=========================== */
+
+.profile-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.profile-photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e5e7eb;
+    margin-bottom: 16px;
+}
+
+
+/* ===========================
+   FORM GRID
+=========================== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+
+/* ===========================
+   LABEL
+=========================== */
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #374151;
+}
+
+
+/* ===========================
+   INPUT
+=========================== */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: .2s;
+    background: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.form-action {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: .25s;
+}
+
+.btn i {
+    margin-right: 6px;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-secondary {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    background: #e5e7eb;
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:900px){
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full-width{
+        grid-column:span 1;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .profile-photo img{
+        width:140px;
+        height:140px;
+    }
+
+    .page-header h2{
+        font-size:22px;
+    }
+
+}

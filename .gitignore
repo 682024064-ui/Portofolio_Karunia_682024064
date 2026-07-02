@@ -1,0 +1,12 @@
+# Environment variables (kredensial asli — JANGAN pernah commit)
+.env
+
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code settings (opsional, biar gak nyampur sama setting editor orang lain)
+.vscode/

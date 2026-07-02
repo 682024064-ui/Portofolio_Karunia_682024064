@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil | Admin Panel</title>
+
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/profiles.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- Sidebar & Topbar akan dimuat dari base.html -->
+    <div id="baseLayout"></div>
+
+    <main class="admin-content">
+
+        <section class="page-header">
+            <h2>Kelola Profil</h2>
+            <p>Perbarui informasi profil yang akan ditampilkan pada website portofolio.</p>
+        </section>
+
+        <section class="card">
+
+            <form id="profileForm">
+
+                <div class="profile-photo">
+
+                    <img
+                        id="previewImage"
+                        src="https://placehold.co/180x180?text=Foto"
+                        alt="Foto Profil">
+
+                    <input
+                        type="hidden"
+                        id="foto_url"
+                        name="foto_url">
+
+                    <button
+                        type="button"
+                        id="btnUpload"
+                        class="btn btn-secondary">
+
+                        <i class="fas fa-upload"></i>
+                        Upload Foto
+
+                    </button>
+
+                    <input
+                        type="file"
+                        id="photoInput"
+                        accept="image/*"
+                        hidden>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" id="nama_lengkap">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nama Panggilan</label>
+                        <input type="text" id="nama_panggilan">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tempat Lahir</label>
+                        <input type="text" id="tempat_lahir">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tanggal Lahir</label>
+                        <input type="date" id="tanggal_lahir">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telepon</label>
+                        <input type="text" id="telepon">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Universitas</label>
+                        <input type="text" id="universitas">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fakultas</label>
+                        <input type="text" id="fakultas">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Program Studi</label>
+                        <input type="text" id="prodi">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Semester</label>
+                        <input type="text" id="semester">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Alamat</label>
+                        <textarea
+                            id="alamat"
+                            rows="4"></textarea>
+                    </div>
+
+                </div>
+
+                <div class="form-action">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        <i class="fas fa-floppy-disk"></i>
+                        Simpan Perubahan
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- JS -->
+<script src="js/api.js"></script>
+<script src="js/base.js"></script>
+<script src="js/profiles.js"></script>
+
+</body>
+</html>

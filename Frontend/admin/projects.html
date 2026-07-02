@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola Proyek | Admin</title>
+
+    <link rel="icon" href="/favicon.ico">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/projects.css">
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- Sidebar & Navbar -->
+    <div id="baseLayout"></div>
+
+    <main class="admin-content">
+
+        <section class="page-header">
+
+            <div>
+
+                <h2>Kelola Proyek</h2>
+
+                <p>
+                    Kelola daftar proyek atau portofolio yang akan ditampilkan pada halaman utama.
+                </p>
+
+            </div>
+
+            <button
+                id="btnTambahProject"
+                class="btn btn-primary">
+
+                <i class="fas fa-plus"></i>
+
+                Tambah Proyek
+
+            </button>
+
+        </section>
+
+        <section class="card">
+
+            <table class="table">
+
+                <thead>
+
+                    <tr>
+
+                        <th width="70">ID</th>
+                        <th width="120">Gambar</th>
+                        <th>Judul</th>
+                        <th>Link</th>
+                        <th width="170">Aksi</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="projectTable">
+
+                    <tr>
+
+                        <td colspan="5" class="text-center">
+
+                            Memuat data...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- ================= MODAL ================= -->
+
+<div id="projectModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h3 id="modalTitle">
+
+                Tambah Proyek
+
+            </h3>
+
+            <button
+                id="closeModal"
+                class="close-btn">
+
+                &times;
+
+            </button>
+
+        </div>
+
+        <form id="projectForm">
+
+            <input
+                type="hidden"
+                id="projectId">
+
+            <input
+                type="hidden"
+                id="gambar_url">
+
+            <div class="form-group">
+
+                <label>
+
+                    Judul Proyek
+
+                </label>
+
+                <input
+                    type="text"
+                    id="judul"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    Deskripsi
+
+                </label>
+
+                <textarea
+                    id="deskripsi"
+                    rows="6"
+                    required></textarea>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    Upload Gambar
+
+                </label>
+
+                <input
+                    type="file"
+                    id="gambar"
+                    accept="image/*">
+
+            </div>
+
+            <div class="preview-wrapper">
+
+                <img
+                    id="previewImage"
+                    src=""
+                    alt="Preview">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+
+                    Link Project
+
+                </label>
+
+                <input
+                    type="url"
+                    id="link_project"
+                    placeholder="https://github.com/username/project">
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    id="btnBatal"
+                    class="btn btn-secondary">
+
+                    Batal
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Simpan
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/base.js"></script>
+<script src="js/projects.js"></script>
+
+</body>
+
+</html>
